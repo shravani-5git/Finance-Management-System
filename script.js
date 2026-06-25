@@ -251,7 +251,7 @@ function setBudget() {
         alert("Enter a valid budget amount");
         return;
     }
-s
+
     budget = budgetValue;
 
     localStorage.setItem("budget", budget);
