@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+<body class="dashboard-page">
+
+<div class="dashboard">
+    <div class="header">
+    <h2>Expense Tracker Dashboard</h2>
+    <div><span id="welcomeUser"></span>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+</div>
+<div class="budget-box">
+    <input type="number" id="budgetInput" placeholder="Set Budget Limit (₹)">
+    <button onclick="setBudget()">Set Budget</button>
+</div>
+
+   <div class="summary">
+    
+    <div class="card">
+        <h3>Total Spent</h3>
+        <p>₹ <span id="total">0</span></p>
+    </div>
+
+    <div class="card">
+        <h3>Set Budget Limit</h3>
+        <p><span id="budgetDisplay">0</span></p>
+    </div>
+
+    <div class="card">
+        <h3>Expense Count</h3>
+        <p><span id="expenseCount">0</span></p>
+    </div>
+
+
+</div>
+
+    <!-- FORM -->
+    <div class="form-box">
+
+        <input type="number" id="amount" placeholder="Amount (₹)">
+
+        <div class="dropdown">
+
+        <input type="text" id="category" placeholder="Select Category" readonly onclick="toggleDropdown()">
+
+        <div class="dropdown-box" id="dropdownBox">
+
+        <div onclick="setCategory('Food')">Food</div>
+        <div onclick="setCategory('Travel')">Travel</div>
+        <div onclick="setCategory('Shopping')">Shopping</div>
+        <div onclick="setCategory('Education')">Education</div>
+        <div onclick="setCategory('Bills')">Bills</div>
+        <div onclick="setCategory('Entertainment')">Entertainment</div>
+
+        <div onclick="enableOther()">Other </div>
+
+         </div>
+
+        </div>
+
+        <input type="date" id="date">
+
+        <input type="text" id="description" placeholder="Description">
+
+        <button onclick="addExpense()">➕ Add Expense</button>
+
+    </div>
+
+   
+    <!-- TABLE -->
+    <div id="expenseList"></div>
+    <button onclick="clearAll()" class="danger">🗑 Clear All</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
