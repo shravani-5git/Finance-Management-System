@@ -1,7 +1,6 @@
-# Expense-Tracker
+# Finance Management System
 A responsive Expense Tracker web application built using HTML, CSS, and JavaScript with user authentication, budget management, expense tracking, and local storage support.
 
-# Expense Tracker
 
 A simple and user-friendly Expense Tracker web application developed using HTML, CSS, and JavaScript.
 
